@@ -180,12 +180,10 @@ class _QuizState extends State<Quiz> {
     if (!force &&
         (_selectedAnswer == null ||
             _currentOptions[_selectedAnswer!] != _currentQuiz.correctAnswer)) {
-      print(_wrongShakePlay);
       setState(() {
         _wrongShakePlay = true;
       });
       Future.delayed(_wrongShakeDuration, () {
-        print(_wrongShakePlay);
         setState(() {
           _wrongShakePlay = false;
         });
